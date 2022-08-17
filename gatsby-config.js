@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  trailingSlash: "ignore",
+  trailingSlash: "never",
   siteMetadata: {
     title: "Full-Stack Bootcamp",
     author: "Methee Ruetaichetcharoen",
