@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  trailingSlash: "ignore",
   siteMetadata: {
     title: "Full-Stack Bootcamp",
     author: "Methee Ruetaichetcharoen",
@@ -33,6 +34,26 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-github-trigger-webhook",
+      options: {
+        githubAPIToken: "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",
+        owner: "toasttab",
+        repo: "mktg-craft-cms",
+        fullyQualifiedRef: "heads/playground/gatsby-test",
+        secretKey: "a super secret key, maybe with emojis?",
+        addressCallback: "http://localhost/endpoint/for/notifying",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        //bucketName: "mktg-headless-otl",
+        bucketName: "otl-lewisgoulden-test",
+        acl: null,
+        region: "us-east-1",
       },
     },
   ],

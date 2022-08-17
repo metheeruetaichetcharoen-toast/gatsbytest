@@ -5,21 +5,14 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "predeploy": "npm run compile",
-    "deploy": "node example/example.js",
-    "compile": "cross-env NODE_ENV=production tsc -p .",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "deploy": "gatsby-plugin-s3 deploy --yes"
   },
   "dependencies": {
     "@octokit/auth-app": "^4.0.4",
     "@octokit/rest": "^19.0.3",
+    "axios": "^0.19.2",
     "gatsby": "^4.17.2",
+    "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sass": "^5.17.0",
     "gatsby-plugin-sharp": "^4.19.0",
     "gatsby-remark-images": "^6.19.0",
